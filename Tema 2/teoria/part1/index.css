@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  color: blueviolet;
+  background-color: #ffebcd;
+  text-align: center;
+}
+
+#container {
+  color:black;
+  
+}
+
+.paragraf {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2 {
+  /* font-size: 30px; */
+  font-size: 4rem;
+  /* rem = x vegades el default grandaria de la lletra */
+}
+
+div p {
+  color: rgba(255, 0, 255, 0.5)
+}
+
+div .paragraf{
+  text-transform: capitalize;
+}
+
+p.paragraf span {
+  text-decoration: underline;
+  color: brown;
+}
+
+div * {
+/* bla bla bla */
+}
+
+button {
+  padding: 10px;
+  background-color: azure;
+  font-style: italic;
+}
+
+button:hover {
+  background-color: azure;
+  opacity: 0.8;
+  cursor: pointer;
+  font-weight: bold;
+}
