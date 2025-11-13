@@ -1,7 +1,7 @@
 *{
   margin: 0;
   text-align: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body, div a{
@@ -61,6 +61,7 @@ input[type="email"]:focus,
 textarea:focus{ 
 outline:none;
 box-shadow: 1px 1px 20px #e2c044d8;
+border-color: #e2c044;
 }
 
 input[type="text"],

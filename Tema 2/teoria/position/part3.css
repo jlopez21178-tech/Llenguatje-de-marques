@@ -1,0 +1,97 @@
+:root{
+  --verd: #9bc1bc;
+  --vermell: #b06565;
+  --blau: #8bc7d295;
+  --rosa: #e47ccbc4;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  Position:
+  - static --> default
+  - relative
+  - absolute
+  - fixed
+  - sticky
+  - initial
+  - inherit
+
+  Propietats relacionades:
+  - top, bottom, left, right
+  - z-index
+
+*/
+
+h1 {
+  position: relative;
+  left: 50px;
+  /* top: 50px; */
+  width: calc(100% - 50px);
+
+  background-color: var(--rosa);
+}
+
+.sticky-menu, .footer {
+  background-color: var(--verd);
+}
+
+.sticky-menu {
+  position: sticky;
+  top: 0px;
+}
+
+.pare {
+  background-color: var(--vermell);
+  height: 200px;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.pare div{
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
+
+.pare div:first-child{
+  background-color: var(--verd);
+  left: 60px;
+  top: 40px;
+  z-index: 10;
+  
+  /* position: fixed;
+  bottom: 80px;
+  right: 80px; */
+}
+
+.pare div:last-child{
+  background-color: var(--rosa);
+  left: 80px;
+  top: 20px;
+  z-index: 1;
+}
+
+.large {
+  height: 3000px;
+  width: 70%;
+  margin: 10px auto;
+  margin-bottom: 70px;
+  background-color: var(--blau);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer div, .sticky-menu div {
+  display: inline;
+  padding: 20px;
+}

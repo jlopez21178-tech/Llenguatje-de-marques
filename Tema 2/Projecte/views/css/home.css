@@ -1,0 +1,15 @@
+p{
+  margin: 20px 0px;
+}
+
+nav{
+  display: none;
+}
+
+img[alt^="icono"]{
+  width: 30px;
+}
+
+::-webkit-slider-thumb{
+  counter-reset: 20;
+}

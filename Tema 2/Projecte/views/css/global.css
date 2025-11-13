@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Tangerine:wght@400;700&display=swap");
+
+:root{
+  --vermell: #93032e;
+  --dorado: #e4bd51;
+  --negre: #100c08;
+  --blanc: #faf7f0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+img{
+  width: 100px;
+}
+
+header {
+  padding: 20px;
+  background-color: #93032e;
+  max-height: 10vw;
+  position: sticky;
+  top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #faf7f0;
+  margin: 0 0px;
+}
+
+a:hover{
+  color: #e4bd51;
+  font-weight: bold;
+}
+
+body{
+  background-color: #100c08;
+  color: #faf7f0;
+}
+
+h1{
+  font-family: Tangerine;
+  font-size: 70px;
+  padding-top: 20px;
+}
+
+main{
+  background-color: #93032e;
+  margin: 20px;
+}
+
+p {
+  font-family: Nunito;
+}
+
+button{
+  color: #faf7f0;
+  background-color: #e4bd51;
+  width: 100px;
+  height: 30px;
+  border-radius: 50px;
+  border-color: #faf7f0;
+}
+
+button:hover{
+  cursor:pointer;
+  box-shadow: 0px 0px 20px 10px #e4bd51;
+}
