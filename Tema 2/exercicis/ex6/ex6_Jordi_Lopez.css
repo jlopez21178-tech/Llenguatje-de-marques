@@ -55,8 +55,7 @@ ul li {
 
 section{
   position:sticky;
-  /* left: 30%; */
-  top: 260px;
+  top: 270px;
   margin-left: 25%;
 }
 
@@ -64,6 +63,6 @@ section{
   display: inline-block;
   margin: 5px auto;
   left: 30%;
-  padding: 30px 20%;
+  padding: 30px 15%;
   background-color: var(--groc);
 }

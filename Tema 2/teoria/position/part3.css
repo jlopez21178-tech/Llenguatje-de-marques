@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: linear-gradient(360deg, red, blue, pink);
+}
+
 /* 
   Position:
   - static --> default

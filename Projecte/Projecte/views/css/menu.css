@@ -1,0 +1,45 @@
+:root{
+  --vermell: #93032e;
+  --vermell-transparent: #93032ec4;
+  --dorado: #e4bd51;
+  --dorado-oscuro: #e4bd51ee ;
+  --negre: #100c08;
+  --blanc: #faf7f0;
+}
+
+section{
+  width: 90vw;
+  padding: 10px 0;
+}
+
+.navegacio {
+  position: relative;
+  left: 0;
+  top: 50px;
+  z-index: 300;
+}
+
+.filtro{
+  display: none;
+}
+
+ul li{
+  list-style: none;
+  display: inline;
+}
+
+article p{
+  padding: 10px;
+  width: 80%;
+  position: relative;
+  left: 8%;
+}
+
+.fotoPlato{
+  display: none;
+}
+
+p:hover{
+  background-color: var(--vermell);
+  font-weight:bold ;
+}
