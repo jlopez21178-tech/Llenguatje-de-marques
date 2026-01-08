@@ -1,0 +1,187 @@
+:root{
+  --blanc: hsl(0, 0%, 98%);
+  --gray: hsl(0, 0%, 41%);
+  --black: hsl(0 ,0%, 8%);
+}
+
+@font-face {
+  font-family: Epilogue;
+  src: url(./fonts/Epilogue/Epilogue-VariableFont_wght.ttf);
+}
+
+*{
+  font-family: 'Epilogue';
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 80px;
+}
+
+img[alt="logo"]{
+  width: 25%;
+}
+
+nav button{
+  border: none;
+  background-color: var(--blanc);
+  color: var(--gray);
+  font-size: 20px;
+}
+
+#btn-menu, #btn-close{
+  position: absolute;
+  right: 20px; top: 20px;
+  width: 10%; 
+  z-index: 5;
+}
+
+.show-menu{
+  display: none;
+}
+
+.nav-visible{
+  display: block;
+}
+
+nav{
+  display: none;
+  position: fixed; right: 0; top: 0;
+  z-index: 3;
+}
+.back{
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+}
+.front{
+  color: var(--gray);
+  background-color: var(--blanc);
+  position: fixed; right: 0;
+  height: 100vh; width: 70vw;  
+  display: flex;
+  flex-direction: column;
+}
+
+.ul-submenu{
+  display: none;
+  flex-direction: column;
+}
+.front ul, .btn-container{
+  font-size: 20px;
+  list-style: none;
+  position: relative;
+  left: 30px;
+}
+.front ul li{
+  padding: 10px 0;
+}
+
+#btn-features{
+  margin-top: 100px;
+}
+.btn-container{
+  margin-top: 20px;
+}
+.btn-container button{
+  display: block; 
+  width: 80%; 
+  height: 40px;
+  font-size: 15px;
+}
+.btn-register{  
+  border: 2px solid var(--gray);
+  border-radius: 10px;
+}
+
+[alt = "arrow-up"]{
+  display: none;
+}
+
+.subMenu{
+  display: flex;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+main picture img{
+  width: 100%;
+}
+
+main section{
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+main section h2{
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+main section p{
+  color: var(--gray);
+  line-height: 30px;
+  padding: 0 3%;
+}
+
+main section div{
+  display:  flex;
+  align-items: center;
+  gap: 15px;
+}
+
+main section div img{
+  height: 15px
+}
+
+main section div img:nth-child(2){
+  height: 25px;
+}
+
+.btn-learn{
+  width: 130px;
+  color: var(--blanc);
+  background-color: var(--black);
+  padding: 15px 0;
+  border-radius: 15px;
+}
+
+@media (min-width: 700px){
+
+  .back{
+    display: none;
+  }
+  #btn-menu, #btn-close{
+    display: none;
+  }
+
+  main{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 10%;;
+  }
+
+  main picture img{
+    width: 40vw;
+  }
+  main section{
+    text-align: left;
+    padding: 0 10%;
+  }
+  main section h2{
+    font-size: 7rem;
+  }
+}
