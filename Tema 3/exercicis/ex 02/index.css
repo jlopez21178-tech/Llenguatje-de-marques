@@ -17,7 +17,7 @@
   box-sizing: border-box;
 }
 
-header{
+/* header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@ img[alt="logo"]{
 
 nav button{
   border: none;
-  background-color: var(--blanc);
+  background-color: transparent;
   color: var(--gray);
   font-size: 20px;
 }
@@ -43,30 +43,21 @@ nav button{
   z-index: 5;
 }
 
-.show-menu{
+#nav-menu{
   display: none;
-}
-
-.nav-visible{
-  display: block;
-}
-
-nav{
-  display: none;
-  position: fixed; right: 0; top: 0;
   z-index: 3;
 }
 .back{
+  position: absolute; inset: 0;
   width: 100vw; height: 100vh;
   background-color: rgba(0,0,0,0.7);
 }
 .front{
+  flex-direction: column;
   color: var(--gray);
   background-color: var(--blanc);
-  position: fixed; right: 0;
-  height: 100vh; width: 70vw;  
-  display: flex;
-  flex-direction: column;
+  position: absolute; inset: 0 0 0 auto;
+  width: 70vw;
 }
 
 .ul-submenu{
@@ -106,7 +97,61 @@ nav{
 
 .subMenu{
   display: flex;
+} */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
+
+#nav-menu, .ul-submenu, [alt = "arrow-up"]{
+  display: none;
+}
+
+#btn-close{
+  position: absolute; right: 0;
+  margin: 10px;
+}
+
+.back{
+  position: fixed; inset: 0;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.front{
+  width: 65vw;
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  background-color: var(--blanc);
+}
+
+.front ul{
+  padding-top: 50px;
+}
+.front ul li{
+  list-style: none;
+}
+
+.front ul, .ul-submenu, .btn-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.front ul li, .btn-container{
+  padding: 10px 20px;
+}
+
+header button{
+  border: none;
+  background-color: transparent;
+}
+
+header button, .front ul li{
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
 
 main{
   display: flex;
@@ -161,17 +206,52 @@ main section div img:nth-child(2){
 
 @media (min-width: 700px){
 
-  .back{
-    display: none;
+  header{
+    width: 100vw;
+    height: 170px;
+    align-items: center;
+    align-content: center;
+  }
+  #nav-menu{
+    display: flex;
+    position: absolute;
+    left: 0;
   }
   #btn-menu, #btn-close{
     display: none;
   }
-
+  .back{
+    background-color: transparent;
+    height: 0;
+  }
+  .front{
+    display: flex;
+    /* width: 60vw; */
+    height: 150px;
+    align-items: center;
+    flex-direction: row;
+    background-color: transparent;
+    margin-top: 0;
+  }
+  .front button, .front ul li{
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+  .front ul, .btn-container{
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+  }
+  #btn-features, .btn-container{
+    margin-top: 0;
+  }
+  .ul-submenu{
+    flex-direction: column !important;
+  }
   main{
     display: flex;
     flex-direction: row-reverse;
-    padding: 0 10%;;
+    padding: 0 10%;
   }
 
   main picture img{

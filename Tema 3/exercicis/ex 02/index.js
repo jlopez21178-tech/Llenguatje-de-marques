@@ -3,13 +3,13 @@ const btnClose = document.querySelector("#btn-close");
 const navMenu = document.querySelector("#nav-menu");
 
 btnMenu.addEventListener("click", () =>{
-  btnMenu.classList.add("show-menu");
-  navMenu.classList.add("nav-visible");
+  btnMenu.style.display = "none";
+  navMenu.style.display = "flex";
 });
 
 btnClose.addEventListener("click", () => {
-  btnMenu.classList.remove("show-menu");
-  navMenu.classList.remove("nav-visible");
+  btnMenu.style.display = "flex";
+  navMenu.style.display = "none";
 });
 
 const arrowDown1 = document.querySelector("#arrow-down-1");
