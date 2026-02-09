@@ -1,73 +1,46 @@
 /* Menu desplegable del HEADER */
-header nav{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-nav {
+header nav {
   display: none;
-  position: sticky;
   font-size: 30px;
-  text-align: center;
-  margin-top: 155px;
-  align-content: center;
   background-color: var(--negre);
   z-index: -1;
+  height: 100vh;
+  width: 60%;
+  position: absolute; right: 0; top: 0;
+  justify-content: center;
 }
 
-nav a{
-  display: block;
+header nav a {
+  display: flex;
   color: var(--blanc);
   text-decoration: none;
-  position: relative;
-  top: 0;
-  padding: 5%;
+  padding: 10px 0;
   border-bottom: 1px solid var(--dorado);
 }
 
-nav a:hover {
+header nav a:hover {
   color: var(--dorado);
-} 
-nav a:first-child{
+}
+header nav a:first-child {
   padding-top: 100px;
 }
-nav a:last-child{
+header nav a:last-child {
   border-width: 0px;
 }
 
-.nav-visible{
-  display: block;
-}
-.button-menu{
-  display: none;
-}
-
-.btn-menu{
-  z-index: 10;
+.btn-menu,
+.btn-close {
+  position: absolute;
+  right: 10px;
+  width: 30px;
   color: var(--dorado);
 }
 
-.btn-menu, .btn-close{
-  width: 30px;
-}
-
 .btn-close{
-  color: var(--vermell);
+  display: none;
 }
-.btn-menu:hover, .btn-close{
-  cursor: pointer;
-}
-
-.btn-menu, .btn-close{
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-@media (min-width: 700px){
-  nav{
+@media (min-width: 700px) {
+  header nav {
     display: block;
     position: relative;
     margin-top: 0;
@@ -75,7 +48,7 @@ nav a:last-child{
     height: 50px;
   }
 
-  nav a{
+  header nav a {
     border-width: 0;
     font-size: 25px;
     margin: 5px;
@@ -83,8 +56,9 @@ nav a:last-child{
     display: inline;
     padding: 10px;
   }
-  
-  .btn-menu, .btn-close{
-    display:none;
+
+  .btn-menu,
+  .btn-close {
+    display: none;
   }
 }

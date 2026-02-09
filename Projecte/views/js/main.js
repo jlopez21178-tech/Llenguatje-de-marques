@@ -1,19 +1,4 @@
-// Menu
 
-const btnMenu = document.querySelector(".btn-menu");
-const navMenu = document.querySelector("header nav");
-const btnClose = document.querySelector(".btn-close")
-
-btnMenu.addEventListener("click", () => {
-  navMenu.classList.add("nav-visible");
-  btnMenu.classList.add("button-menu");
-});
-
-btnClose.addEventListener("click", () => {
-  navMenu.classList.remove("nav-visible");
-  btnMenu.classList.remove("button-menu");
-})
-// 
 // Lector scroll
 window.addEventListener("scroll", function() {
     const scrollY = window.scrollY;

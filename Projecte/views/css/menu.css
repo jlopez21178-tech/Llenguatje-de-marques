@@ -1,45 +1,53 @@
-:root{
-  --vermell: #93032e;
-  --vermell-transparent: #93032ec4;
-  --dorado: #e4bd51;
-  --dorado-oscuro: #e4bd51ee ;
-  --negre: #100c08;
-  --blanc: #faf7f0;
+.navegacio{
+  height: 15vh;
+}
+.categorias{
+  display: flex;
+  width: 100vw;  
+  
+  list-style: none;
+
 }
 
-section{
-  width: 90vw;
-  padding: 10px 0;
+.categorias button{
+  width: 100%;
+  padding: 20px;
+  background-color: transparent;
+
+  flex-basis: 100vw;
 }
 
-.navegacio {
-  position: relative;
-  left: 0;
-  top: 50px;
-  z-index: 300;
+.categorias button:focus{
+  background-color: var(--dorado);
 }
 
 .filtro{
   display: none;
-}
+  position: absolute;
 
-ul li{
   list-style: none;
-  display: inline;
+}
+.filter-show{
+  display: flex;
 }
 
-article p{
-  padding: 10px;
-  width: 80%;
-  position: relative;
-  left: 8%;
+
+.starter-show{
+  display: block;
+}
+.entrante{
+  display: none;
+}
+
+
+.menu article:hover{
+  background-color: var(--dorado);
 }
 
 .fotoPlato{
   display: none;
 }
 
-p:hover{
-  background-color: var(--vermell);
-  font-weight:bold ;
+.img-show{
+  display: flex;
 }
