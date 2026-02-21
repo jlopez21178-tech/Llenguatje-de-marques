@@ -1,15 +1,15 @@
 main {
-  align-content : center;
-  position : relative;
+  align-content: center;
+  position: relative;
 }
 /* ------- BODY -------- */
 
-main h1{
+main h1 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
 section {
-  padding-bottom : 20px;
+  padding-bottom: 20px;
 }
 /* ------Principio-------- */
 .principal {
@@ -22,11 +22,11 @@ section {
   top: 0;
   left: 0;
   width: 100vw;
-  height:100vh;
-  background-attachment:local;
-  background-image: url(../../img/fondo-principio-movil.jpg);
+  height: 100vh;
+  background-attachment: local;
+  background-image: url(./img/fondo-principio-movil.jpg);
   transition: filter 0.2s ease-out;
-  background-size:cover;
+  background-size: cover;
   z-index: -1;
 }
 
@@ -40,137 +40,148 @@ section {
   opacity: 0;
   transition: opacity 0.6s ease-out;
 }
-.principal-text p{
+.principal-text p {
   text-align: justify;
   padding: 0 20px;
   margin-bottom: 20px;
 }
 .principal-text div {
-  padding : 0 5%;
+  padding: 0 5%;
 }
-.principal input[type="button"]{
+.principal input[type="button"] {
   display: none;
 }
 iframe {
-  width : 90%; height: 25vh;
+  width: 90%;
+  height: 25vh;
   border: 5px solid var(--negre);
-  border-radius : 10px ;
+  border-radius: 10px;
 }
 /* ---- Opiniones ---- */
 .opiniones {
-  /* position : relative; */
   background-size: cover;
-  background-image: url(../../img/fondo-opiniones.jpg);
+  background-image: url(./img/fondo-opiniones.jpg);
   transition: opacity 1s ease-out;
   opacity: 0;
   border-top: 2px solid var(--dorado);
   border-bottom: 2px solid var(--dorado);
+
 }
 .opiniones div {
-  position: relative; left: -30%; top: 30px;
+  display: flex;
+
+  align-items: center;
+  align-content: center;
 }
 /* ----- Mejores platos ---- */
-.plato-estrella{
+.plato-estrella {
   margin-bottom: calc(50px + 1px);
-  background-image: url(../../img/fondo-platos-estrella.jpg);;
+  background-image: url(./img/fondo-platos-estrella.jpg);
   background-repeat: round;
   text-align: center;
   transition: opacity 1s ease-out;
   opacity: 0;
 }
-.plato-estrella h1{
+.plato-estrella h1 {
   font-size: 2.5rem;
 }
 .plato-estrella article {
-  margin : 10px 0;
+  margin: 10px 0;
 }
 
-.plato-estrella article p{
+.plato-estrella article p {
   font-family: Cormorant;
   font-size: 2rem;
   width: 70%;
-  position: relative; left: 50%;
+  position: relative;
+  left: 50%;
   transform: translateX(-50%);
   padding-bottom: 10px;
 }
 .plato-estrella article img {
-  width : 70%;
+  width: 70%;
 }
-.rating{
+.rating {
   color: var(--dorado);
 }
 
 /* ----- Desktop ------ */
-@media (min-width : 900px) {
-  main section:nth-child(2){
+@media (min-width: 900px) {
+  main section:nth-child(2) {
     text-align: left;
   }
-  main section{
-    width: 90vw;
-  }
-  .principal{
+
+  .principal {
     background-size: contain;
     position: relative;
   }
-  .principal-text{
+  .principal-text {
     opacity: 1;
   }
-  .background-prin{
-    background-image: url(../../img/fondo-principio-pc.jpg);
+  .background-prin {
+    background-image: url(./img/fondo-principio-pc.jpg);
   }
   iframe {
-    height : 30vh; width: 50vw;
+    height: 30vh;
+    width: 50vw;
   }
-  .principal-text div{
+  .principal-text div {
     text-align: right;
   }
-  .principal-text article{
-    position: relative; top: 50%;
+  .principal-text article {
+    position: relative;
+    top: 50%;
     transform: translateY(-90%);
     width: 35%;
   }
-  .principal-text article input[type="button"]{
+  .principal-text article input[type="button"] {
     display: inline-block;
-    height: 10vh; width: 100%;
+    height: 10vh;
+    width: 100%;
     margin-bottom: 50px;
   }
-  .principal-text input[type="button"]:hover{
+  .principal-text input[type="button"]:hover {
     background-color: var(--dorado);
     animation: scale 0.3s;
   }
 
   @keyframes scale {
-    to { transform: scale(0.9); }
+    to {
+      transform: scale(0.9);
+    }
   }
   .plato-estrella article img {
-    width : 70%;
+    width: 70%;
   }
-  footer input[type="button"]{
-   display: none;
+  footer input[type="button"] {
+    display: none;
   }
 }
 
 /* ----FOOTER---- */
 footer {
-  position: fixed; bottom: 0;
-  width : 100%; height: 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
   padding-top: 10px;
-  background-color : var(--vermell);
-  border-top : 1px solid var(--dorado);
+  background-color: var(--vermell);
+  border-top: 1px solid var(--dorado);
 }
 input[type="button"] {
-  height: 30px; width: 40%;
+  height: 30px;
+  width: 40%;
   background: transparent;
   color: var(--blanc);
-  border-radius : 7px;
+  border-radius: 7px;
   border: 1px solid var(--dorado);
   cursor: pointer;
   margin: 0 5px;
 }
 input[type="button"]:hover {
-  box-shadow : 0 0 10px var(--dorado);
+  box-shadow: 0 0 10px var(--dorado);
 }
 input[type="button"]:focus {
-  opacity : 0.9;
+  opacity: 0.9;
   box-shadow: 0 2px var(--dorado);
 }
