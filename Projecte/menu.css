@@ -1,0 +1,86 @@
+.navegacio {
+  height: 15vh;
+}
+.categorias {
+  display: flex;
+
+  list-style: none;
+}
+
+.categorias button {
+  width: 100%;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.categorias button:focus {
+  background-color: var(--dorado);
+}
+
+.filtro {
+  display: none;
+  position: absolute;
+
+  list-style: none;
+}
+.filter-show {
+  display: flex;
+}
+
+.starter-show {
+  display: block;
+}
+.entrante {
+  /* display: none; */
+}
+
+.menu article:hover {
+  background-color: var(--dorado);
+}
+
+.fotoPlato {
+  display: none;
+}
+
+.img-show {
+  display: flex;
+}
+
+@media (min-width: 700px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+
+    height: calc(100vh - 15vh);
+    align-items: center;
+  }
+
+  .categorias {
+    flex-direction: column;
+  }
+
+  .menu {
+    width: 80vw;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+  }
+
+  .menu article {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+  }
+
+  .menu article p{
+    width: 100%;
+  }
+
+  .fotoPlato {
+    display: flex;
+  }
+}
