@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE llistat SYSTEM "ex4.dtd">
+
+
+<llistat>
+  <futur preu="">
+    <origen capital="Madrid"></origen>
+    <producte></producte>
+    <mercat pais="Espanya"></mercat>
+  </futur>
+
+  <divisa preu="10€" estable="1">
+    <origen capital="NovaYork"></origen>
+    <nom>Euro</nom>
+    <canvi moneda="Libra">13</canvi>
+    <canvi moneda="Yen">1000</canvi>
+    <canvi moneda="Dolar">11</canvi>
+  </divisa>
+
+  <bons preu="" estable="1">
+    <origen capital="Frankfurt"></origen>
+    <pais_de_procedencia></pais_de_procedencia>
+    <valors>
+      <desitjat></desitjat>
+      <minim></minim>
+      <maxim></maxim>
+    </valors>
+  </bons>
+
+  <lletres preu="">
+    <origen capital="Toquio"></origen>
+    <interes emissor="Espanya"></interes>
+
+  </lletres>
+
+</llistat>

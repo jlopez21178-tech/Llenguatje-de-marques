@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE llistacursos SYSTEM "ex2.1.dtd">
+
+<llistacursos>
+
+  <professors>
+    <professor NRP="MQ32">
+      <nom></nom>
+      <cognom></cognom>
+      <segon_cognom></segon_cognom>
+    </professor>
+  </professors>
+
+  <assignatures>
+    <assignatura codi_profe="MQ32" codi="EN1">
+      <nom>Angles</nom>
+    </assignatura>
+  </assignatures>
+
+
+  <curs curs_code="D21234-2">
+    <alumne dni="415151F">
+      <nom></nom>
+      <cognom></cognom>
+      <segon_cognom></segon_cognom>
+      <assignatura_alumnat codi="EN1"></assignatura_alumnat>
+    </alumne>
+  </curs>
+</llistacursos>

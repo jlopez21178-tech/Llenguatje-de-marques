@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE magatzem [
+  <!ELEMENT magatzem ((llibres*, quaderns*, llapisos*)+)>
+
+  <!ELEMENT llibres (#PCDATA)>
+  <!ATTLIST llibres titol CDATA #REQUIRED>
+
+  <!ELEMENT quaderns (#PCDATA)>
+  <!ATTLIST quaderns num_fulles CDATA #IMPLIED>
+
+  <!ELEMENT llapisos (numero)>
+  <!ELEMENT numero (#PCDATA)>
+]>
+
+<magatzem>
+  <llibres titol="Abec"> </llibres>
+
+  <quaderns num_fulles="3">
+  </quaderns>
+
+  <llapisos>
+    <numero>1234</numero>
+  </llapisos>
+
+  <llapisos>
+    <numero>213</numero>
+  </llapisos>
+  <quaderns></quaderns>
+
+  <llibres titol="asd" ></llibres>
+
+  <quaderns></quaderns>
+</magatzem>

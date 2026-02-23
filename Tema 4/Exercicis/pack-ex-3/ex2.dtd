@@ -1,0 +1,12 @@
+<!ELEMENT llistacursos (curs+)>
+<!ELEMENT curs (alumne+)>
+<!ELEMENT alumne (dni, nom, cognom, segon_cognom?, assignatures)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT cognom (#PCDATA)>
+<!ELEMENT segon_cognom (#PCDATA)>
+<!ELEMENT assignatures (assignatura+)>
+<!ELEMENT assignatura (nom, professor)>
+<!ATTLIST assignatura codi ID #REQUIRED>
+<!ELEMENT professor (nom, cognom, segon_cognom?)>
+<!ATTLIST professor NRP ID #REQUIRED>

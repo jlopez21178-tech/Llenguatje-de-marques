@@ -1,0 +1,33 @@
+
+<!ELEMENT llistat (futur+, divisa+, bons+, lletres+)>
+
+<!ELEMENT origen EMPTY>
+<!ATTLIST origen capital (Madrid | NovaYork | Frankfurt | Toquio) #REQUIRED>
+
+<!ELEMENT futur (origen, producte, mercat?)>
+<!ATTLIST futur preu CDATA #REQUIRED>
+<!ELEMENT producte (#PCDATA)>
+<!ELEMENT mercat EMPTY>
+<!ATTLIST mercat pais (Espanya | Alemanya | USA | Japo) #REQUIRED>
+
+
+<!ELEMENT divisa (origen, nom, canvi+)>
+<!ATTLIST divisa preu CDATA #REQUIRED>
+<!ATTLIST divisa estable (0 | 1) #IMPLIED>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT canvi (#PCDATA)>
+<!ATTLIST canvi moneda CDATA #REQUIRED>
+
+<!ELEMENT bons (origen, pais_de_procedencia, valors)>
+<!ATTLIST bons preu CDATA #REQUIRED>
+<!ATTLIST bons estable (0 | 1) #IMPLIED>
+<!ELEMENT pais_de_procedencia (#PCDATA)>
+<!ELEMENT valors (desitjat, minim, maxim)>
+<!ELEMENT desitjat (#PCDATA)>
+<!ELEMENT minim (#PCDATA)>
+<!ELEMENT maxim (#PCDATA)>
+
+<!ELEMENT lletres (origen, interes)>
+<!ATTLIST lletres preu CDATA #REQUIRED>
+<!ELEMENT interes (#PCDATA)>
+<!ATTLIST interes emissor (Espanya | Alemanya | USA | Japo) #REQUIRED>

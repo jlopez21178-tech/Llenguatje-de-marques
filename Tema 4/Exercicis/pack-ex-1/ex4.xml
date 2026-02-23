@@ -1,0 +1,46 @@
+<!-- Documento 1 -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<documento>
+<p>Mi Primer <destacar importancia=1>documento <!-- Los valores de los atributos se deben poner entre ''-->
+XML</destacar></p] <!-- Se debe usar ')' y no ']'-->
+<p>Comienza con la etiqueta <documento&gt;</p> <!-- Si lo que quiere es que se muestre la '<' debe usar la entidad '&lt;'-->
+<p>A continuacion colocamos un elemento sin
+contenido</p>
+<imagen fichero="imagen.gif"> <!-- Debe cerrar la etiqueta adecuadamente, ya sea terminandola con '/>' o '</imagen>'-->
+</documento>
+
+<!-- Documento 2 -->
+
+<?xml version="1.0"?>
+<libros>
+<libro id="quijote">
+<titulo>El Quijote</titulo>
+<autor nombre=cervantes nombre=cervantes> <!-- Atributo 'nombre' repetido y no usa las comillas para indicar el valor-->
+<descripcion>Es el m<ejor libro de <!-- Tiene un '<' en medio de 'mejor'-->
+cervantes.</descripcion>
+</libro] <!-- cierra con ']' en vez de con ')'-->
+</Libros>
+
+<!-- Documento 3 -->
+
+<?Xml version="1,0" encoding="UTF-8"?>
+<triangulo base="7"altura="5">
+<triangulo base="2"altura="6">
+<triangulo base="3"altura="3">
+
+  <!-- Le falta la raiz que engloba las demas etiquetas -->
+
+<!-- Documento 4 -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<numeros>
+<1 letra="u" letra="n" letra="o">1</>
+<2 letra="d" letra="o" letra="s">22</>
+<6 letra="s" letra="e" letra="i" letra="s">666666</>
+</numeros>
+
+<!-- Las etiquetas empiezan con numeros y no pueden empezar asi-->
+ <!-- Duplicidad de atributos asignandole valores distintos-->
+  <!-- No cierra adecuadament las etiquetas-->

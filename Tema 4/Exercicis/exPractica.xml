@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<curriculum>
+  <nom>Jordi</nom>
+  <llinatge>Lopez</llinatge>
+  <any_naixement>2005</any_naixement>
+  <residencia>
+    <ciutat>Sant Lluis</ciutat>
+    <pais>Espanya</pais>
+  </residencia>
+  <!-- <residencia ciutat="Sant LLuis" pais="Espanya"></residencia> -->
+  <!-- <residencia ciutat="Sant LLuis" pais="Espanya"/> -->
+  <contacte>
+    <telefon>659457999</telefon>
+    <email>jlopez21178@iesjoanramis.org</email>
+    <linkedin>89w789eudsjk.linkedin</linkedin>
+  </contacte>
+  <descripcio>Lorem
+  </descripcio>
+  <competencies>
+    <competencia nom="Español" nivell="C3"></competencia>
+    <competencia nom="Catalan" nivell="C3"></competencia>
+    <competencia nom="Ingles" nivell="C3"></competencia>
+  </competencies>
+
+  <formacions>
+    <formacio titulacio="Primaria" centre="CEIP Sant Lluis" any="2014" ></formacio>
+    <formacio titulacio="ESO" centre="IES Cap de llevant" any="2018" ></formacio>
+    <formacio titulacio="Batxillerat" centre="IES Cap de llevant" any="2020" ></formacio>
+  </formacions>
+
+  <experiencia_professional>
+    <experiencia>
+      <lloc></lloc>
+      
+    </experiencia>
+  </experiencia_professional>
+</curriculum>

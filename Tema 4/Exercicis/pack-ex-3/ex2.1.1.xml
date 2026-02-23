@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE llistacursos SYSTEM "ex2.1.dtd">
+
+<llistacursos>
+
+  <professors>
+    <professor NRP="MQ32">
+      <nom>Rodoberto</nom>
+      <cognom>Fernandes</cognom>
+      <segon_cognom>Alonso</segon_cognom>
+    </professor>
+    <professor NRP="MT21">
+      <nom>Alfonsito</nom>
+      <cognom>Robertito</cognom>
+    </professor>
+  </professors>
+
+  <assignatures>
+    <assignatura codi_profe="MQ32" codi="EN1">
+      <nom>Angles</nom>
+    </assignatura>
+    <assignatura codi_profe="MQ32" codi="EN2">
+      <nom>Angles</nom>
+    </assignatura>
+    <assignatura codi_profe="MT21" codi="MT1">
+      <nom>Matematiques</nom>
+    </assignatura>
+  </assignatures>
+
+
+  <curs curs_code="F21-3">
+    <alumne dni="41512387F">
+      <nom>Jordi</nom>
+      <cognom>Lop</cognom>
+      <segon_cognom>Kruger</segon_cognom>
+      <assignatura_alumnat codi="EN1"></assignatura_alumnat>
+      <assignatura_alumnat codi="EN2"></assignatura_alumnat>
+      <assignatura_alumnat codi="MT1"></assignatura_alumnat>
+    </alumne>
+  </curs>
+
+  <curs curs_code="F21-4">
+    <alumne dni="415154112387F">
+      <nom>Alberto</nom>
+      <cognom>Fernandes</cognom>
+      <assignatura_alumnat codi="EN1"></assignatura_alumnat>
+      <assignatura_alumnat codi="MT1"></assignatura_alumnat>
+    </alumne>
+    <alumne dni="123948D">
+      <nom>Fifa</nom>
+      <cognom>Fifas</cognom>
+      <assignatura_alumnat codi="EN1"></assignatura_alumnat>
+      <assignatura_alumnat codi="MT1"></assignatura_alumnat>
+    </alumne>
+  </curs>
+</llistacursos>

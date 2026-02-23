@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<missatgeria>
+  <missatge>
+    <remitent nom="Alfredo Reino" email="alf@ramis.com"></remitent>
+    <destinatari nom="Bill Clinton" email="president@whitehouse.gov"></destinatari>
+    <assumpte>Hola Bill</assumpte>
+    <text>
+      <paragraf>Hola que tal?</paragraf>
+    </text>
+  </missatge>
+  <missatge>
+    <remitent nom="Bill Clinton" email="president@whitehouse.gov"></remitent>
+    <destinatari nom="Alfredo Reino" email="alf@ramis.com"></destinatari>
+    <assumpte>Molt de temps</assumpte>
+    <text>
+      <paragraf>Fa molt de temps que no escrius.</paragraf>
+      <paragraf>A veure si telefones i quedem aviat.</paragraf>
+    </text>
+  </missatge>
+  <missatge>
+    <remitent nom="Alfredo Reino" email="alf@ramis.com"></remitent>
+    <destinatari nom="Bill Clinton" email="president@whitehouse.gov"></destinatari>
+    <assumpte>Salutacions</assumpte>
+    <text>
+      <paragraf>Salutacions</paragraf>
+    </text>
+  </missatge>
+</missatgeria>

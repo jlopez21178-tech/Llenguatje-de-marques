@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entrega SYSTEM "ex1.dtd">
+
+<entrega>
+
+  <lot>
+    <palet>
+      <num_caixes>29</num_caixes>
+      <contingut>
+        <nom>GPU</nom>
+        <procedencia>CHINA</procedencia>
+        <num_serie>12389js0912</num_serie>
+        <pes_individual>2000</pes_individual>
+        <unitat_pes>grams</unitat_pes>
+      </contingut>
+      <pes>30000</pes>
+      <manipulacio>Fragil, tenir compte</manipulacio>
+    </palet>
+  </lot>
+
+  <lot>
+    <palet>
+      <num_caixes>201</num_caixes>
+      <contingut>
+        <nom>CPU</nom>
+        <procedencia>CHINA</procedencia>
+        <procedencia>ANGLATERA</procedencia>
+        <procedencia>USA</procedencia>
+        <procedencia>ALEMANYA</procedencia>
+        <num_serie>1239840932850928</num_serie>
+        <pes_individual>230</pes_individual>
+      </contingut>
+      <pes>43000</pes>
+      <manipulacio>Tenir compte</manipulacio>
+    </palet>
+  </lot>
+
+</entrega> 

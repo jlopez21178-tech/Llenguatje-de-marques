@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE llistacursos SYSTEM "ex2.dtd">
+
+<llistacursos>
+  <curs>
+    <alumne>
+      <dni></dni>
+      <nom></nom>
+      <cognom></cognom>
+      <segon_cognom></segon_cognom>
+      <assignatures>
+        <assignatura codi="EN1">
+          <nom></nom>
+          <professor NRP="MQ32">
+            <nom></nom>
+            <cognom></cognom>
+            <segon_cognom></segon_cognom>
+          </professor>
+        </assignatura>
+      </assignatures>
+    </alumne>
+  </curs>
+</llistacursos>

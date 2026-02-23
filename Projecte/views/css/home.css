@@ -65,37 +65,49 @@ iframe {
   opacity: 0;
   border-top: 2px solid var(--dorado);
   border-bottom: 2px solid var(--dorado);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
 }
-.opiniones div {
-  position: relative; left: -30%; top: 30px;
+
+.opiniones article{
+  align-items: center;
+  display: flex;
+
+  width: 55%;
+  justify-content: space-between;
 }
+
 /* ----- Mejores platos ---- */
 .plato-estrella{
-  margin-bottom: calc(50px + 1px);
   background-image: url(../../img/fondo-platos-estrella.jpg);;
   background-repeat: round;
-  text-align: center;
   transition: opacity 1s ease-out;
   opacity: 0;
+  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  align-items: center;
+
 }
 .plato-estrella h1{
-  font-size: 2.5rem;
+  padding-top: 20px;
+  font-size: 4rem;
 }
-.plato-estrella article {
-  margin : 10px 0;
+.plato-estrella article, .plato-estrella article img {
+  width: 70%;
 }
 
 .plato-estrella article p{
   font-family: Cormorant;
   font-size: 2rem;
-  width: 70%;
-  position: relative; left: 50%;
-  transform: translateX(-50%);
-  padding-bottom: 10px;
 }
-.plato-estrella article img {
-  width : 70%;
-}
+
 .rating{
   color: var(--dorado);
 }

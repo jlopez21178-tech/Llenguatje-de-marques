@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE comanda [
+  <!ELEMENT comanda (tractor+)>
+  <!ELEMENT tractor (component+)>
+  <!ELEMENT component (data_entrega, pes, num_serie, km_maxims?)>
+  <!ELEMENT data_entrega EMPTY>
+  <!ELEMENT pes (#PCDATA)>
+  <!ELEMENT num_serie (#PCDATA)>
+  <!ELEMENT km_maxims (#PCDATA)>
+
+  <!ATTLIST component fabricant CDATA #REQUIRED>
+  <!ATTLIST component fragil (0 | 1) '0'>
+  <!ATTLIST data_entrega dia CDATA #IMPLIED>
+  <!ATTLIST data_entrega mes CDATA #REQUIRED>
+  <!ATTLIST data_entrega any CDATA #REQUIRED>
+  <!ATTLIST pes unitat (quilos | grams) #REQUIRED>
+
+]>
+
+
+<comanda>
+  <tractor>
+    <component fabricant="repsols" fragil="0">
+      <data_entrega mes="01" any="2025"></data_entrega>
+      <pes unitat="grams">3000</pes>
+      <num_serie>1234dsd</num_serie>
+      <km_maxims>21000</km_maxims>
+    </component>
+     <component fabricant="jasdnjka" fragil="1">
+      <data_entrega dia="01" mes="01" any="2025"></data_entrega>
+      <pes unitat="quilos">3000</pes>
+      <num_serie>123hdsd</num_serie>
+      <km_maxims>21000</km_maxims>
+    </component>
+  </tractor>
+  <tractor>
+    <component fabricant="repsols">
+     <data_entrega mes="01" any="2025"></data_entrega>
+     <pes unitat="grams">300</pes>
+     <num_serie>4dsd</num_serie>
+   </component>
+  </tractor>
+
+</comanda>
