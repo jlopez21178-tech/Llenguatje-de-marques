@@ -24,7 +24,7 @@ section {
   width: 100vw;
   height: 100vh;
   background-attachment: local;
-  background-image: url(./img/fondo-principio-movil.jpg);
+  background-image: url(./img/fondos/fondo-principio-movil.jpg);
   transition: filter 0.2s ease-out;
   background-size: cover;
   z-index: -1;
@@ -60,7 +60,7 @@ iframe {
 /* ---- Opiniones ---- */
 .opiniones {
   background-size: cover;
-  background-image: url(./img/fondo-opiniones.jpg);
+  background-image: url(./img/fondos/fondo-opiniones.jpg);
   transition: opacity 1s ease-out;
   opacity: 0;
   border-top: 2px solid var(--dorado);
@@ -77,7 +77,7 @@ iframe {
 /* ----- Mejores platos ---- */
 .plato-estrella {
   margin-bottom: calc(50px + 1px);
-  background-image: url(./img/fondo-platos-estrella.jpg);
+  background-image: url(./img/fondos/fondo-platos-estrella.jpg);
   background-repeat: round;
   transition: opacity 1s ease-out;
   opacity: 0;

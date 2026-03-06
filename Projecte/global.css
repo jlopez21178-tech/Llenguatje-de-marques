@@ -101,9 +101,8 @@ header nav a:last-child {
   border-width: 0px;
 }
 
-.btn-close{
+i.btn-close{
   display: none;
-
 }
 
 .btn-menu,
@@ -140,9 +139,8 @@ header nav a:last-child {
     padding: 10px;
   }
 
-  .btn-menu,
-  .btn-close {
-    display: none !important;
+ header > div > div{
+    display: none ;
   }
 }
 
