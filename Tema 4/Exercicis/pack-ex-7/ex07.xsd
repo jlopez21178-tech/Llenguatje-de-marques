@@ -1,0 +1,49 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="cooperativa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="granja" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="productor" type="productorType" maxOccurs="unbounded" />
+              <xs:element name="animales" type="animalesType" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="productorType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="id" type="xs:ID" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="animalesType">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="gato" maxOccurs="2" type="companiaType" />
+        <xs:element name="perro" type="companiaType"/>
+      </xs:choice>
+      <xs:choice>
+        <xs:element name="cerdo" maxOccurs="unbounded"/>
+        <xs:element name="cerdo" type="cerdoType" maxOccurs="1"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="companiaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="decompania" type="xs:boolean" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="cerdoType">
+    <xs:attribute name="cantidad" type="xs:positiveInteger" use="required"/>
+  </xs:complexType>
+</xs:schema>

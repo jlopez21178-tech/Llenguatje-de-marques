@@ -1,0 +1,58 @@
+*{
+  background-color: #1b2e3d;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+  border-bottom: 1px solid #ffffff54 ;
+  text-shadow: 0 0 5px white;
+}
+
+h3{
+  font-size: 2rem;
+}
+
+body, body > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+
+button{
+  padding: 20px;
+  background-color: transparent;
+  border:  none;
+  border-radius: 20px;
+  font-size: 2rem;
+
+  cursor: pointer;
+}
+
+button:first-child{
+  background-color: black;
+}
+.solo, .grup{
+  width: 90vw;
+  margin-bottom: 30px;
+
+  border: 1px solid #ffffff54;
+  border-radius: 20px;
+  padding: 0 30px;
+}
+
+.grup{
+  display: none;
+}
+
+ul{
+  font-size: 1.5rem;
+}
+
+iframe{
+  width: 100vw;
+  height: 80vh;
+  box-shadow: 0px 0px 15px yellowgreen;
+}

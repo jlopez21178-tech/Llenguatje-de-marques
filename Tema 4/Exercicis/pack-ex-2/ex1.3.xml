@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE operaciones [
-  <!ELEMENT operaciones ((venta*, compra*)+)>
 
-  <!ELEMENT venta (titulo+,cantidad,lliurat?,importe)>
-  <!ELEMENT titulo (#PCDATA)>
-  <!ELEMENT cantidad (#PCDATA)>
-  <!ELEMENT lliurat (#PCDATA)>
-  <!ELEMENT importe (#PCDATA)>
-  <!ATTLIST importe moneda CDATA #REQUIRED>
-
-  <!ELEMENT compra (titulo+, proveedor, data)>
-  <!ELEMENT proveedor (#PCDATA)>
-  <!ELEMENT data (dia, mes, año)>
-  <!ELEMENT dia (#PCDATA)>
-  <!ELEMENT mes (#PCDATA)>
-  <!ELEMENT año (#PCDATA)>
-]>
 
 <operaciones>
 

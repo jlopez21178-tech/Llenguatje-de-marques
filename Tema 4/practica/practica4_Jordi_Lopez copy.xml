@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE factura SYSTEM "practica4_Jordi_Lopez.dtd">
+
+<factura>
+  <capçalera id="abc2">
+    <data dia="21" mes="3" any="25"></data>
+    <info tipus="client" nom_fiscal="Alfonso" nif="41611193D"></info>
+    <info tipus="proveidor" nom_fiscal="Roberto" nom_comercial="Intel" nif="4328947D"></info>
+  </capçalera>
+
+  <linia id="aksdj" article_ref="askld">
+    <article id="askld" unitats="20">
+      <descripcio>producte molt bo</descripcio>
+      <preu>30</preu>
+      <preu_iva tipus="4">34</preu_iva>
+    </article>
+  </linia>
+
+  <linia id="aerj" article_ref="abd">
+    <article id="abd" unitats="23">
+      <descripcio>producte molt bonisim</descripcio>
+      <preu>35</preu>
+      <preu_iva tipus="21">60</preu_iva>
+    </article>
+  </linia>
+
+  <total>
+    <subtotal article_ref="askld">320</subtotal>
+    <subtotal article_ref="abd">10000</subtotal>
+    <amb_iva>10340</amb_iva>
+    <sense_iva>5320</sense_iva>
+  </total>
+
+</factura>

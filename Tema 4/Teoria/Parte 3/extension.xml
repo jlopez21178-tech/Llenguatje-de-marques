@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persones
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+  xs:noNamespaceSchemaLocation="extension.xsd">
+  <persona>
+    <nom>Pepe</nom>
+    <data_naixement>2025-10-31</data_naixement>
+  </persona>
+
+  <client>
+    <nom lang="es">Pepe</nom>
+    <edat>22</edat>
+    <data_naixement>2025-10-31</data_naixement>
+    <email>pepe@gmail.com</email>
+  </client>
+</persones>

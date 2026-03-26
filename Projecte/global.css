@@ -1,155 +1,204 @@
-/* Link als distints fonts */
-@font-face {
-  font-family: Tangerine;
-  font-weight:bold;
-  src: url(/Projecte/fonts/Tangerine-Regular.woff2);
+:root {
+  --negro: #100c08;
+  --rojo: #93032e;
+  --dorado: #e4bd51;
+  --blanco: #faf7f0;
+  --rojo-suave: #93032e11;
+  --bordes: #93032e55;
 }
 
 @font-face {
-  font-family: Cormorant;
-  src: url(/Projecte/fonts/CormorantGaramond-Regular.woff2);
+  font-family: Tangerine;
+  src: url(./fonts/Tangerine-Regular.ttf);
+}
+
+@font-face {
+  font-family: cormorant;
+  src: url(./fonts/Cormorant-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: Nunito;
-  src: url(/Projecte/fonts/NunitoSans-Regular.woff2);
+  src: url(./fonts/Nunito-VariableFont_wght.ttf);
 }
 
-:root{
-  --vermell: #93032e;
-  --vermell-transparent: #93032ec4;
-  --dorado: #e4bd51;
-  --dorado-oscuro: #e4bd51ee ;
-  --negre: #100c08;
-  --blanc: #faf7f0;
-}
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: center;
+  color: var(--blanco);
 }
 
-/* fonts dels distints camps de text */
-
-h1{
-  font-family: Tangerine;
-}
-a{
-  font-family: Cormorant;
+header {
+  border-bottom: 1px solid var(--bordes);
+  padding: 2%;
 }
 
-p {
-  font-family: Nunito;
-}
-
-/* ------------------------------ */
-
-/* HEADER */
-header{
-  background-color: var(--vermell);
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 10%;
-  z-index: 5;
-}
-
-header div{
+header > div {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content:space-between;
-  padding: 5px 10px;
+}
+
+header > div > h1,
+header > div > div > i {
+  color: var(--dorado);
+}
+
+header > div > h1 {
+  font-family: Tangerine;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+i.btn-close {
+  display: none;
 }
 
 #logo {
-  filter: drop-shadow(1px 1px 3px var(--dorado));
-  width: 10%;
-}
-
-
-/* Menu desplegable del HEADER */
-header nav {
+  width: 20%;
   display: none;
-  justify-content: center;
-
-  font-size: 30px;
-  background-color: var(--negre);
-
-  z-index: -1;
-  height: 100vh;
-  width: 60%;
-  position: absolute; right: 0; top: 0;
 }
 
-header nav a {
-  display: flex;
-  color: var(--blanc);
+.navegacio {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  position: fixed;
+  border-bottom: 1px solid var(--bordes);
+  padding: 30px;
+  width: 100vw;
+}
+
+.navegacio > h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--dorado);
+}
+
+.nav-item {
+  padding: 30px;
+}
+
+.nav-item:hover {
+  background-color: #93032e18;
+  border-radius: 20px;
+}
+
+.nav-item i {
+  color: var(--dorado);
+  padding: 5px;
+}
+
+.nav-item a {
   text-decoration: none;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--dorado);
+  padding: 30px;
+  font-size: 1.5rem;
 }
 
-header nav a:hover {
-  color: var(--dorado);
-}
-header nav a:first-child {
-  padding-top: 100px;
-}
-header nav a:last-child {
-  border-width: 0px;
-}
-
-i.btn-close{
+.registre{
   display: none;
 }
 
-.btn-menu,
-.btn-close {
-  position: absolute;
-  right: 10px;
-  width: 30px;
-  color: var(--dorado);
+body {
+  background-color: var(--negro);
+  margin-bottom: 7%;
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-@media (min-width: 700px) {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
+  background-color: var(--negro);
+  padding: 2% 5%;
+  border-top: 1px solid var(--bordes);
+}
+
+footer p:first-child {
+  color: var(--dorado);
+  font-family: Tangerine;
+  font-size: 2rem;
+}
+
+footer p:nth-child(2) {
+  color: #faf7f0;
+  opacity: 0.35;
+}
+
+footer span i {
+  color: var(--dorado);
+  opacity: 0.5;
+}
+
+@media (min-width: 1025px) {
   header {
+    flex-direction: row;
     display: flex;
-    /* justify-content: space-between; */
+
+    justify-content: space-evenly;
     align-items: center;
   }
-  header nav {
+
+  .navegacio {
     display: flex;
-    position: relative;
-    margin-top: 0;
-    background-color: var(--vermell);
-    height: auto;
-    width: 100%;
+    flex-direction: row;
+    position: inherit;
+    
+    
+    border: none;
+    width: auto;
+    padding: 0;
   }
 
-  header nav a {
-    border-width: 0;
-    font-size: 25px;
-    margin: 5px;
-    align-content: center;
-    display: inline;
-    padding: 10px;
+  .navegacio h3, .nav-item i, i.btn {
+    display: none;
   }
 
- header > div > div{
-    display: none ;
+  .nav-item {
+    padding: 0;
   }
-}
 
+  .nav-item a:hover{
+    color: var(--dorado);
+  }
 
-/* --------------------------------- */
-/* MAIN */
-body{
-  background-color: var(--negre);
-}
-button, body{
-  color: var(--blanc);
+  .nav-item a {
+    padding: 1vw;
+  }
+  
+  .registre {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .registre button {
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 8px 16px;
+  }
+  .btn-focus{
+    color: var(--dorado);
+    border-bottom: 1px solid var(--dorado);
+  }
+  
+  .registre button:hover {
+    opacity: 0.8;
+  }
+  
+  .registre button:first-child {
+    border: 1px solid var(--dorado);
+    background-color: transparent;
+  }
+  
+  .registre button:last-child {
+    border: none;
+    background-color: var(--dorado);
+  }
+  
 }

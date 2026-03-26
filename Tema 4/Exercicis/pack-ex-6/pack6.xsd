@@ -1,0 +1,39 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="concesionario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="modelo" maxOccurs="unbounded">
+          <xs:complexType mixed="true">
+            <xs:sequence minOccurs="0">
+              <xs:element name="motor" type="typeMotor" />
+              <xs:element name="potencia" type="xs:string" />
+              <xs:element name="consumo_medio">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="velocidad_km" type="xs:positiveInteger" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" />
+            <xs:attribute name="modelos_relacionados" type="xs:IDREFS" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- <xs:complexType name="typeMotor" mixed="true">
+    <xs:attribute name="modelos_relacionado" type="xs:IDREFS" use="optional" />
+  </xs:complexType> -->
+
+  <xs:complexType name="typeMotor">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="modelos_relacionados" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>

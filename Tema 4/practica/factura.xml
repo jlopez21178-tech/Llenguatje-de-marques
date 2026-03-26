@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<factura
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+  xs:noNamespaceSchemaLocation="factura.xsd">
+  <capçalera>
+    <id>abc2</id>
+    <data>
+      <dia>21</dia>
+      <mes>3</mes>
+      <any>25</any>
+    </data>
+    <info>
+      <tipus>client</tipus>
+      <nom_fiscal>Alfonso</nom_fiscal>
+      <nif>41611193D</nif>
+    </info>
+  </capçalera>
+
+  <linia>
+    <id>aksdj</id>
+    <article_ref>askld</article_ref>
+    <article>
+      <id>askld</id>
+      <unitats>20</unitats>
+      <descripcio>producte molt bo</descripcio>
+      <preu>30.0</preu>
+      <preu_iva>
+        <tipus>4</tipus>
+        <preu>34.0</preu>
+      </preu_iva>
+    </article>
+  </linia>
+
+  <total>
+    <subtotal>
+      <article_ref>askld</article_ref>
+      <preu>320</preu>
+    </subtotal>
+    <amb_iva>10340</amb_iva>
+    <sense_iva>5320</sense_iva>
+  </total>
+
+</factura>

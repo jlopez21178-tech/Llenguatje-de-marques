@@ -1,0 +1,48 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="vehicles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="vehicle" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="marca" type="xs:string"/>
+              <xs:element name="any" type="any_type"/>
+              <xs:element name="combustible" type="combustible_type" minOccurs="0" maxOccurs="1"/>
+            </xs:all>
+            <xs:attribute name="matricula" type="matricula_type" use="required"/>
+            <xs:attribute name="tipus" type="vehicle_type" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="any_type">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1900"/>
+      <xs:maxInclusive value="2100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="combustible_type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="gasolina"/>
+      <xs:enumeration value="diesel"/>
+      <xs:enumeration value="electric"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="vehicle_type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="cotxe"/>
+      <xs:enumeration value="moto"/>
+      <xs:enumeration value="bicicleta"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="matricula_type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{4}[A-Z]{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

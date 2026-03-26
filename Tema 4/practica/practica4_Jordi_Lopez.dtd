@@ -1,0 +1,34 @@
+<!ELEMENT factura (capçalera, linia+, total)>
+
+<!ELEMENT capçalera (data, info+)>
+<!ATTLIST capçalera id NMTOKEN #REQUIRED>
+<!ELEMENT data EMPTY>
+<!ATTLIST data
+  dia CDATA #REQUIRED
+  mes CDATA #REQUIRED
+  any CDATA #REQUIRED>
+<!ELEMENT info EMPTY>
+<!ATTLIST info
+  tipus (client | proveidor) #REQUIRED
+  nom_fiscal CDATA #REQUIRED
+  nom_comercial CDATA #IMPLIED
+  nif CDATA #REQUIRED>
+
+<!ELEMENT linia (article)>
+<!ATTLIST linia
+  id NMTOKEN #REQUIRED
+  article_ref IDREF #REQUIRED>
+<!ELEMENT article (descripcio, preu, preu_iva)>
+<!ATTLIST article
+  id ID #REQUIRED
+  unitats CDATA #REQUIRED>
+<!ELEMENT descripcio (#PCDATA)>
+<!ELEMENT preu (#PCDATA)>
+<!ELEMENT preu_iva (#PCDATA)>
+<!ATTLIST preu_iva tipus (4 | 10 | 21) #REQUIRED>
+
+<!ELEMENT total (subtotal+, amb_iva, sense_iva)>
+<!ELEMENT subtotal (#PCDATA)>
+<!ATTLIST subtotal article_ref IDREF #REQUIRED>
+<!ELEMENT amb_iva (#PCDATA)>
+<!ELEMENT sense_iva (#PCDATA)>

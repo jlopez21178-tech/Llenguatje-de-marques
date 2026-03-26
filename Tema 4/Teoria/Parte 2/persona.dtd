@@ -1,0 +1,4 @@
+<!ELEMENT persona (nom, edat, data_naixement)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT edat (#PCDATA)>
+<!ELEMENT data_naixement (#PCDATA)>

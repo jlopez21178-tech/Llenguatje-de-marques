@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="factura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="capçalera">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:NMTOKEN" />
+              <xs:element name="data">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="dia">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:positiveInteger">
+                          <xs:maxInclusive value="31"/>
+                          <xs:minInclusive value="1"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="mes" type="xs:positiveInteger" />
+                    <xs:element name="any" type="xs:positiveInteger" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="info" type="dades_type" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="linia" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:NMTOKEN" />
+              <xs:element name="article_ref" type="xs:IDREF" />
+              <xs:element name="article">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="id" type="xs:ID" />
+                    <xs:element name="unitats" type="xs:integer" />
+                    <xs:element name="descripcio" type="xs:string" />
+                    <xs:element name="preu" type="xs:double" />
+                    <xs:element name="preu_iva">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="tipus" type="iva_type" />
+                          <xs:element name="preu" type="xs:double" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <!-- Aqui van los atributos -->
+            <!-- <xs:attribute name="id" type="xs:ID" use="required"></xs:attribute> -->
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="total">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="subtotal" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="article_ref" type="xs:IDREF" />
+                    <xs:element name="preu" type="xs:double" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="amb_iva" type="xs:double" />
+              <xs:element name="sense_iva" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="dades_type">
+    <xs:sequence>
+      <xs:element name="tipus" type="xs:string" />
+      <xs:element name="nom_fiscal" type="xs:string" />
+      <xs:element name="nom_comercial" type="xs:string" minOccurs="0" />
+      <xs:element name="nif" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="iva_type">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="10"/>
+      <xs:enumeration value="21"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
